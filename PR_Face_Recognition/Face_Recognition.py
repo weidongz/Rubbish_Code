@@ -2,6 +2,7 @@
 """
 Created on Mon Jul  1 18:53:27 2019
 @description: Use for test Yale and ORL datasets
+ref: https://www.cnblogs.com/zmshy2128/p/6150690.html
 @author: lab
 """
 import numpy as np
