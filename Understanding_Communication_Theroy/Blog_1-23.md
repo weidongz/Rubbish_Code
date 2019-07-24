@@ -96,7 +96,7 @@ sympy.expand(series(cos(x), x, 0, 10))
 
 ## 理解复数
 
-> 引自[连载23](连载23：利用欧拉公式理解虚数)
+> 引自[连载23,利用欧拉公式理解复数)
 
 ![](http://download.txrjy.com/forum/month_1005/20100503_6c87049bdbc623e41029xcQC10VsjUN7.jpg)
 
