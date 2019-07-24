@@ -94,6 +94,12 @@ sympy.expand(series(cos(x), x, 0, 10))
 
 利用泰勒展开，从输出结果易看出欧拉公式成立
 
+## 理解复数
+
+> 引自[连载23](连载23：利用欧拉公式理解虚数)
+
+![](http://download.txrjy.com/forum/month_1005/20100503_6c87049bdbc623e41029xcQC10VsjUN7.jpg)
+
 ## 连载6：利用卷积计算两个信号的乘积
 
 若两个信号均表示成多项式形式，则可通过卷积计算信号相乘结果。
@@ -288,3 +294,32 @@ y(\theta) & =  b\sin(n\theta+\phi) \\
 \end{aligned}
 \right.
 $$
+
+```python
+def lissajous(q,fignum):
+    theta = np.arange(0, 2*np.pi, 0.01)
+    x = np.cos(theta)
+    y = np.sin(q*theta)
+
+    plt.subplot(1,fignum,q)
+    plt.axis('off')
+    plt.plot(x,y)
+    return
+
+plt.figure(figsize=(10,2)) 
+
+fignum=5
+for i in range(fignum):
+    lissajous(i+1,fignum)
+```
+
+## 实信号和复信号的波形对比
+
+直接采用陈老师的三维频谱图：
+
+>在下面两张图中：x轴（实轴）、y轴（虚轴）所在的平面是复平面，t轴（时间轴）垂直于复平面。
+>上图为实信号f(t)=cos(2πt)的波形图。
+>下图为复信号f(t)=cos(2πt)+jsin(2πt)的波形图。
+>对比这两张图，很容易得出：**实信号在复平面上投影时只有实轴方向有分量，而复信号在复平面上投影时实轴和虚轴方向都有分量。**
+
+![实信号与复信号波形对比](http://download.txrjy.com/forum/month_1004/20100430_466621bbcc03b0fc577e2b2l2wess44I.jpg)
