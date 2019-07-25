@@ -323,3 +323,8 @@ for i in range(fignum):
 >对比这两张图，很容易得出：**实信号在复平面上投影时只有实轴方向有分量，而复信号在复平面上投影时实轴和虚轴方向都有分量。**
 
 ![实信号与复信号波形对比](http://download.txrjy.com/forum/month_1004/20100430_466621bbcc03b0fc577e2b2l2wess44I.jpg)
+
+---
+
+由于部分公式Github显示不佳，贴上[cnblog地址](https://www.cnblogs.com/WindyZ/articles/ComminicationTheroy1_26.html)
+
