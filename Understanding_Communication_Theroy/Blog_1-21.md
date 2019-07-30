@@ -2,6 +2,8 @@
 
 > 深入浅出通信原理（http://www.txrjy.com/thread-394879-1-4.html）从2010年4月8日开始在C114通信人家园上线连载，从多项式乘法讲起，一步一步引出卷积、傅立叶级数展开、旋转向量、三维频谱、IQ调制、数字调制等一系列通信原理知识
 
+[TOC]
+
 ## 连载1：从多项式乘法说起
 
 $$
@@ -123,7 +125,8 @@ c_k=
 \frac{a_0}{2} &,&  k=0 \\
 \frac{1}{2}(a_k-jb_k) & , & k=1,2,\cdots \\
 \frac{1}{2}(a_{-k}+jb_{-k}) & , & k=-1,-2,\cdots
-\end{cases}
+\end{cases}\\
+c_k=\frac{1}{T}\int_{-T/2}^{T/2}f(t)e^{-jkw_0t}dt,\quad k=(0,\pm1,\pm2,\cdots)
 $$
 
 > Ref: [书写多行大括号](https://blog.csdn.net/hhy_csdn/article/details/83722106)
