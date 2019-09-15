@@ -6,6 +6,14 @@
 
 [TOC]
 
+### FFT点数分析
+
+> 连载543
+>
+> FFT点数 = OFDM符号周期 x 采样频率
+>
+> OFDM符号周期 = 1/子载波间隔
+
 ### Cosine信号波形
 
 DFT公式:   $X(k)=\frac{1}{N} \sum_{n=0}^{N-1}x(n)e^{-j\frac{2\pi}{N}kn} $
