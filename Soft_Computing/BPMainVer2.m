@@ -164,21 +164,22 @@ title('loss-epoch变化图像')
 % view(net)
 % y = net(x);
 % result=sim(net,x);
-% %use Toolbox in this experiment
-% a_train=a(randnum,:);
-% y_train=y(randnum,:);
-% a_test=a(randremain,:);
-% y_test=y(randremain,:);
-% net=feedforwardnet(5,'traingd');
-% net=train(net,a_train',y_train');
-% y_predict=sim(net,a_test');
-% accuracy = sum(round(y_predict')==y_test)/length(y_test);
-% fprintf('accuracy: %f\n',accuracy)
-% %输入到隐层权值
-% V=net.iw{1,1};
-% %隐层阙值
-% Phi=net.b{1}; 
-% %隐层到输出层权值
-% W=net.lw{2,1}; 
-% %输出层阙值 
-% Tau=net.b{2};
+%use Toolbox in this experiment
+a_train=a(randnum,:);
+y_train=y(randnum,:);
+a_test=a(randremain,:);
+y_test=y(randremain,:);
+net=feedforwardnet(5,'traingd');
+net=train(net,a_train',y_train');
+y_predict=sim(net,a_test');
+fprintf('%.5f',y_predict)
+accuracy = sum(round(y_predict')==y_test)/length(y_test);
+fprintf('accuracy: %f\n',accuracy)
+%输入到隐层权值
+V=net.iw{1,1};
+%隐层阙值
+Phi=net.b{1}; 
+%隐层到输出层权值
+W=net.lw{2,1}; 
+%输出层阙值 
+Tau=net.b{2};
