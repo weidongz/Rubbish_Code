@@ -282,6 +282,8 @@ public:
                                     WifiPreamble preamble, uint8_t power);
 
 
+  bool CheckIsLrWpanCcaBusy (void); //edited weidong
+
 private:
   /**
    * typedef for a list of WifiPhyListeners
@@ -358,8 +360,7 @@ private:
    */
   void SyncLrWpanState (void);
 
-  bool CheckIsLrWpanCcaBusy (void); //end edited
-
+  
 
   /**
    * The trace source fired when state is changed.
