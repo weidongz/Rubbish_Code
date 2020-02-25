@@ -1,0 +1,23 @@
+/* css语法：选择器{属性名：属性值；} */
+/* css选择器：https://www.w3school.com.cn/cssref/css_selectors.asp */
+.usual_tag, #usual_css_selector{
+    /* font-size: 10px; */
+    padding-left: 36px;
+}
+
+#box_model{
+    /* width:30px;
+    height:40px; */
+    background:rgba(41, 21, 224, 0.315);
+    padding:20px;
+    border:10px solid rgba(75, 73, 70, 0.349);
+    margin:20px;
+    box-sizing: content-box;
+    /* 默认content-box（width和height只针对content，设置box model数值时往外扩张，不便）； 
+    改成border-box：*{box-sizing:border-box;} */
+}
+
+a:hover{
+    font-style: italic;
+    color: green;
+}

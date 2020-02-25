@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="desciption" content="head用于搜索引擎看，meta信息">
+    <meta title="我的HTML练习">
+    <title>我的HTML</title>
+    <!-- for css, 在默认的HTML元素样式上提供了跨浏览器的高度一致性 -->
+    <!-- <link rel="stylesheet" type="text/css" href="normalize.css" /> -->
+    <link rel="stylesheet" href="http://cdn.staticfile.org/normalize/3.0.1/normalize.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="theme.css" />
+    <!-- for css inside html style -->
+    <style type="text/css">
+        h1 {
+            text-align: center
+        }
+
+        h2 {
+            text-align: justify;
+        }
+    </style>
+    <!-- for javascript -->
+    <script>
+        function showDetails(animal) {
+            var animalType = animal.getAttribute("data-animal-type");
+            alert(animal.innerHTML + "是一种" + animalType + "。");
+        }
+    </script>
+
+    <base target="_blank">
+</head>
+
+<body>
+    <h1> <a href="https://www.bilibili.com/video/av23101100/?spm_id_from=333.788.videocard.3" target="_blank"> Learn
+            HTML </a></h1>
+    <hr>
+    <h2 id="html_css_difference">HTML/CSS/Javascript定义</h2>
+    <div>
+        <ul>
+            <li>HTML:超文本标记语言</li> 
+            <li>CSS：层叠样式表</li>
+            <li><a href="#JS-test">Javascript：交互设计用编程语言</a></li>
+        </ul>
+    </div>
+    <br>
+    <hr>
+    <h2>网页结构组成</h2>
+    <ol>
+        <li>文档格式!DOCTYPE、版本声明</li>
+        <li>文档头部head，给搜索引擎看的；包括title，meta 信息（meta author等）, css+js引用信息（link）</li>
+        <li>文档内容body, 用户相关</li>
+    </ol>
+    <hr>
+    <h2>标签相关</h2>
+    <p>
+        <a style="color:gray" href="https://www.w3school.com.cn/tags/index.asp">全标签参考页</a> <br>
+        <h3>标签要点</h3>
+        <ul>
+            <li>双标签：如标题标签页h1 </li>
+            <li>单标签：如换行标签页br </li>
+            <li>标签属性：如超链接的href属性 </li>
+            <li>标签层级：根元素、父元素、子元素</li>
+        </ul>
+        <h3>标签类型</h3>
+        <ul>
+            <li>block level elements特点：另起一行；独占一行（整个网页的宽度）</li>
+            <li>inline elements特点：不另起一行；仅占用需要的宽度，比如span </li>
+        </ul>
+        <h3>常用标签</h3>
+        <div class="usual_tag">
+            div：分小节（方便自己查看） <br />
+            span：隔离一段中的某些内容（标注方便后续CSS美化）【用span比用div更合适】<br />
+            list：分项（类比word里的符号/数字列表按钮）ol/ul<br />
+            form：表单<br />
+            button：按钮<br />
+            header：网页上方的菜单栏<br />
+            nav：菜单栏中应有的导航链接放置处【语义化：是header的子元素】<br />
+        </div>
+    </p>
+
+    <hr>
+    <h2>CSS相关</h2>
+    <div id="CSS">
+        <a href="https://www.w3school.com.cn/cssref/css_selectors.asp">CSS选择器参考页</a>
+        <h3>常用CSS选择器</h3>
+        <div id="usual_css_selector">
+            element：标签；<br />
+            .class：需要在标签中设置class属性；<br />
+            #id：需要在标签中设置id属性；(与class区别：命名规则上，id独一无二，class一类）<br />
+            *：所有；<br />
+            element,element：两个标签效果相同时；（逗号表示并列关系）<br />
+            element element：前标签的子孙中的后标签；（空格表示后代关系)<br />
+            element>element：前标签的儿子中的后标签；（>表示父子关系）<br />
+            element:hover：鼠标经过某个标签时变化；<br />
+        </div>
+        <h3>CSS优先级与权重</h3>
+        <ul>
+            <li>css中多个标签 服从后者；多个link 服从后者。</li>
+            <li>style属性>style标签>link css；</li>
+            <li>明确程度有影响：内部评分。【eg】 h1 a>a</li>
+            <li>!important：选择器{属性名：属性值 !important；}【破坏规则者，少用】</li>
+        </ul>
+
+    </div>
+
+    <hr>
+    <h2><a href="https://www.runoob.com/css/css-boxmodel.html">盒子模型box model(关于布局）</a></h2>
+    <p>
+        <div id="box_model">
+            盒子模型（从内到外）：content - padding(内边距）- border(边框) - margin（外边距）<br />
+            所有元素都是矩形（使用 右键--检查 可见）
+
+        </div>
+    </p>
+
+    <hr>
+    <h2 id="JS-test">JS代码测试，点击显示互动信息</h2>
+    <div>
+        <p>
+            <ul>
+                <u>
+                    <li onclick="showDetails(this)" id="owl" data-animal-type="鸟类">喜鹊</li>
+                </u>
+                <li onclick="showDetails(this)" id="salmon" data-animal-type="鱼类"><u>金枪鱼</u></li>
+            </ul>
+        </p>
+    </div>
+
+</body>
+
+</html>
