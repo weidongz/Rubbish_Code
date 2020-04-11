@@ -263,12 +263,12 @@ esac
 查看当前计划任务：`crontab -l`
 删除：`crontab -r`
 
-```
+```bash
 #crontab命令格式： 分、时、日、月、星期 命令
 # 计划任务中的“分”字段必须有数值，绝对不能为空或是*号，而“日”和“星期”字段不能同时使用，否则就##会发生冲突。
 # For example, you can run a backup of all your user accounts
-# at 5 a.m every week with:
-# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+# at 5 a.m every week Monday with:
+0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
 ```
 
 ## 用户组

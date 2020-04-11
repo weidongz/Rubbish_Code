@@ -17,6 +17,8 @@
     改成border-box：*{box-sizing:border-box;} */
 }
 
+/*a is the hyperlink type/
+
 a:hover{
     font-style: italic;
     color: green;

@@ -15,7 +15,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * 此例子用于测试SpectrumWiFiChannel和Phy下的802.15.4通信
+ * 
  * Author: Weidong_Zheng
  */
 
@@ -220,9 +220,9 @@ int main (int argc, char *argv[])
 
 //  // Tracing
 //  lrWpanHelper.EnablePcapAll (std::string ("lr-wpan-data"), true);
-//  AsciiTraceHelper ascii;
-//  Ptr<OutputStreamWrapper> stream = ascii.CreateFileStream ("lr-wpan-data.tr");
-//  lrWpanHelper.EnableAsciiAll (stream);
+  AsciiTraceHelper ascii;
+  Ptr<OutputStreamWrapper> stream = ascii.CreateFileStream ("lr-wpan-data.tr");
+  lrWpanHelper.EnableAsciiAll (stream);
 
   dev0->GetPhy ()->TraceConnect ("TrxState", std::string ("phy0"), MakeCallback (&StateChangeNotification));
 
