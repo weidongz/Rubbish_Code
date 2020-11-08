@@ -1,9 +1,44 @@
 /* css语法：选择器{属性名：属性值；} */
 /* css选择器：https://www.w3school.com.cn/cssref/css_selectors.asp */
-.usual_tag, #usual_css_selector{
+
+/* HTML选择器(默认标签) */
+h3 {color: brown;font-style: italic;}
+
+/* class选择器(多个标签一个class):  .类名{样式....} */
+.usual_tag {color: chocolate;}
+
+/* id选择器(一个标签仅一个id)：#id名{样式.....} */
+#usual_css_selector{
     /* font-size: 10px; */
     padding-left: 36px;
 }
+
+/* 关联选择符： 选择符1 选择符2 选择符3 ...{样式....} */
+div a{font-family: fantasy;} /*只有div标签中的a标签才采⽤此样式*/
+
+/* 关系选择器：
+div>p 选择所有作为div元素的⼦元素p
+div+p 选择紧贴在div元素之后p元素
+div~p 选择div元素后⾯的所有兄弟元素p */
+
+/* 组合选择符(选择符组): 选择符1,选择符2,选择符3 ...{样式....} */
+h3,h4,h5 {color: gray;}
+
+/* 属性选择器：https://www.w3school.com.cn/css/css_syntax_attribute_selector.asp */
+
+/* 伪类(伪元素)选择符： 标签名:伪类名{样式....}*/
+a:link {color: #FF0000; text-decoration: none} /* 未访问的链接 */
+a:visited {color: #00FF00; text-decoration: none} /* 已访问的链接 */
+a:hover {color: #FF00FF; text-decoration: underline} /* ⿏标在链接上 */
+a:focus {color: gray ;} /*设置元素在其获取焦点时的样式*/
+a:active {color: #0000FF; text-decoration: underline} /* 激活链接 */
+
+/* 伪类选择器： 以：开头的， 链接https://www.w3school.com.cn/cssref/css_selectors.asp */
+/* :first-letter	p:first-letter	选择每个 <p> 元素的首字母。	
+:first-line	p:first-line	选择每个 <p> 元素的首行。	
+:first-child	p:first-child	选择属于父元素的第一个子元素的每个 <p> 元素。 
+:nth-child(n) 匹配⽗元素的第n个⼦元素
+*/
 
 #box_model{
     /* width:30px;
@@ -17,9 +52,3 @@
     改成border-box：*{box-sizing:border-box;} */
 }
 
-/*a is the hyperlink type/
-
-a:hover{
-    font-style: italic;
-    color: green;
-}
